@@ -1,0 +1,467 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+/** Geral **/
+body {
+    font-family: "Roboto Slab", serif;
+    margin: 0 auto;
+}
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.titulo-secao {
+    font-size: 1.7em;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+/** Header **/
+header {
+    border-top: 2px solid #43A047;
+    background: rgba(54, 59, 72, 0.6);
+    height: 64px;
+    width: 100%;
+    position: absolute;
+}
+
+header .container {
+    position: relative;
+}
+
+.menu-opcoes {
+    text-align: center;
+    right: 0;
+    top: -.5em;
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+.menu-opcoes ul {
+    padding-left: 0;
+}
+
+.menu-opcoes li {
+    display: inline-block;
+    width: 6em;
+}
+
+.menu-opcoes a {
+    color: white;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+
+.menu-opcoes a:hover {
+    text-decoration: underline;
+}
+
+/** Destaque **/
+.destaque {
+    background: url(../image/header.jpg) center bottom repeat-x;
+    -webkit-background-size: cover;
+    background-size: cover;
+    color: #fff;
+    height: 330px;
+    padding-top: 10em;
+}
+
+.destaque p {
+    width: 20em;
+}
+
+.destaque p:first-child {
+    width: 20em;
+    font-size: 1.3em;
+    line-height: 1.1;
+}
+
+.destaque p:first-child:first-line {
+    font-size: 2.2em;
+    font-weight: bold;
+}
+
+/** Sobre **/
+.sobre {
+    background-color: #ebebeb;
+    padding: 3em 0 0 0;
+}
+
+.duas-colunas {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    columns: 1;
+}
+
+.duas-colunas h3 {
+    margin: 0;
+}
+
+.sobre p {
+    font: .9em/1.8 sans-serif;
+}
+
+.sobre p:first-child {
+    margin-bottom: 3em;
+}
+
+/** IMC **/
+.imc {
+    padding: 3em 0 7em 0;
+}
+
+.nav_tabs {
+    width: 940px;
+    height: 500px;
+    background-color: #fff;
+    position: relative;
+}
+
+.nav_tabs ul {
+    list-style: none;
+    display: contents;
+}
+
+.nav_tabs ul li {
+    float: left;
+}
+
+.nav_tabs label {
+    width: 191px;
+    padding: 22px;
+    background-color: #363b48;
+    display: block;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+}
+
+.rd_tabs:checked~label {
+    background-color: #43A047;
+}
+
+.rd_tabs {
+    display: none;
+}
+
+.content {
+    border-top: 5px solid #43A047;
+    background-color: #fff;
+    display: none;
+    position: absolute;
+    width: 940px;
+    height: 500px;
+    left: 0;
+}
+
+.rd_tabs:checked~.content {
+    display: block;
+}
+
+#masculino {
+    background: url(../image/masculino.jpg);
+}
+
+#feminino {
+    background: url(../image/feminino.jpg);
+}
+
+#infantilM {
+    background: url(../image/floresta.jpg);
+}
+
+#infantilF {
+    background: url(../image/animais.jpg);
+}
+
+
+.login-page {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 10px auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.calculoMasculino {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: rgb(202, 206, 218);
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+.calculoFeminino {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: rgb(238, 221, 214);
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+.form button:hover,
+.form button:active,
+.form button:focus {
+    background: #43A047;
+}
+
+/** Saúde **/
+.saude {
+    background-color: #ebebeb;
+    padding: 3em 0 3em 0;
+}
+
+.card {
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    width: 280px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+#cards {
+    margin: 2.8rem 0 0 2.8em;
+}
+
+.card .img {
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: all .5s;
+    z-index: 2;
+    position: relative;
+    opacity: .8;
+}
+
+.card:hover .img {
+    width: 430px;
+    opacity: 1;
+}
+
+#caminhada {
+    background-image: url('../image/caminhada.jpg');
+}
+
+#ciclismo {
+    background-image: url('../image/ciclismo.jpg');
+}
+
+#danca {
+    background-image: url('../image/danca.jpg');
+}
+
+#luta {
+    background-image: url('../image/luta.jpg');
+}
+
+#natacao {
+    background-image: url('../image/natacao.jpg');
+}
+
+#habitos {
+    background-image: url('../image/alimintacao.jpg');
+}
+
+.card .text {
+    padding: 0px 20px;
+    height: 0;
+    opacity: 0;
+    transition: all .5s;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    transform: translateY(30px);
+}
+
+.card:hover .text {
+    height: 200px;
+    padding: 10px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card .text .title {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+}
+
+.card .text .desc {
+    font-size: 14px;
+    font-weight: 100;
+    opacity: .8;
+    margin-top: 8px;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.card .arrow {
+    padding: 15px;
+    transform: rotate(-180deg);
+    transition: all .5s;
+}
+
+.card:hover .arrow {
+    transform: rotate(0);
+}
+
+.card .arrow span {
+    font-size: 24px;
+}
+
+/** Footer **/
+footer {
+    display: block;
+    position: relative;
+}
+
+footer::after {
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+footer::before {
+    content: "";
+    background: rgba(106, 162, 185);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+footer .container {
+    padding-top: 3em;
+    height: 6.5em;
+    position: relative;
+}
+
+footer .container img {
+    width: 250px;
+}
+
+.menu-rodape,
+.social {
+    position: absolute;
+}
+
+.menu-rodape ul li {
+    display: inline-block;
+    margin-left: 2em;
+}
+
+.menu-rodape {
+    top: 1em;
+    right: 0;
+}
+
+.social {
+    bottom: 0;
+    right: 0;
+}
+
+.menu-rodape li,
+.social li {
+    display: inline;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social li {
+    float: left;
+}
+
+.social li a {
+    display: block;
+    width: 55px;
+    height: 55px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    margin-left: 1em;
+}
+
+.social a {
+    background-position: top;
+    background-size: 50px 50px;
+}
+
+.direitos {
+    font-family: "Roboto", sans-serif;
+    width: 42.9em;
+    color: #fff;
+    float: left;
+    margin-top: 1.8em;
+    text-align: left;
+}
+
+.social a[href*="facebook"] {
+    background-image: url(../image/facebook.png);
+}
+
+.social a[href*="twitter"] {
+    background-image: url(../image/twitter.png);
+}
+
+.social a[href*="instagram"] {
+    background-image: url(../image/instagram.png);
+}
