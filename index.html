@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Saúde ++</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="./image/favi.jpg" type="image/x-icon">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="./js/calculoIMC.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="menu-opcoes">
+                <ul>
+                    <li><a href="#Sobre">SOBRE</a></li>
+                    <li><a href="#IMC">IMC</a></li>
+                    <li><a href="#Saude">SAÚDE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="destaque">
+        <div class="container">
+            <p>
+                A sua saúde em primeiro lugar.
+            </p>
+
+            <p>
+                Saúde ++ é um site onde pode verificar dicas de nutrição e saber seu IMC sem sair de casa!
+            </p>
+        </div>
+    </section>
+
+    <section class="sobre" id="Sobre">
+        <div class="container">
+            <h2 class="titulo-secao">SOBRE</h2>
+            <div class="duas-colunas">
+                <h3>O que fazemos</h3>
+
+                <p>Disponibilizamos o índice de massa corporal (IMC) masculino, ferminino e para crinças e adolescentes,
+                    também trazemos algumas dicas importante para sua saúde e alimentação.
+                </p>
+
+                <h3>Cálculo do IMC</h3>
+
+                <p>O índice de massa corporal (IMC) é uma medida internacional usada para calcular se uma pessoa está
+                    no peso ideal. Desenvolvido pelo polímata Lambert Quételet no fim do século XIX, trata-se de um
+                    método fácil e rápido para a avaliação do nível de gordura de cada pessoa, sendo, por isso, um
+                    preditor internacional de obesidade adotado pela Organização Mundial da Saúde (OMS).</p>
+
+                <p>O IMC é determinado pela divisão da massa do indivíduo pelo quadrado de sua altura, em que a massa
+                    está em quilogramas e a altura em metros.</p>
+
+                <h2 class="titulo-secao"><img src="image/IMC.png" alt=""></h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="imc" id="IMC">
+        <div class="container">
+            <nav class="nav_tabs">
+                <ul>
+                    <li>
+                        <input type="radio" name="tabs" class="rd_tabs" id="masculino" checked>
+                        <label for="masculino">IMC MASCULINO</label>
+                        <div class="content" id="masculino">
+                            <article>
+                                <div class="login-page">
+                                    <div class="form">
+                                        <form name="formMasculino" id="formMasculino"
+                                            action="javascript:calculaImcMasculino()">
+                                            <input type="number" name="idade" placeholder="Idade"
+                                                pattern="/^-?\d+\.?\d*$/"
+                                                onKeyPress="if(this.value.length==3) return false;" />
+                                            <input type="text" name="peso" maxlength="6"
+                                                onkeyup="checarValorPonto(this)" placeholder="Peso" />
+                                            <input type="text" name="altura" maxlength="4"
+                                                onkeyup="checarValorPonto(this)" placeholder="Altura" />
+                                            <button class="calculoMasculino" type="submit">Calcular</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="radio" name="tabs" class="rd_tabs" id="feminino">
+                        <label for="feminino">IMC FEMININO</label>
+                        <div class="content" id="feminino">
+                            <article>
+                                <div class="login-page">
+                                    <div class="form">
+                                        <form name="formFeminino" id="formFeminino"
+                                            action="javascript:calculaImcFeminino()">
+                                            <input type="number" name="idade" placeholder="Idade"
+                                                pattern="/^-?\d+\.?\d*$/"
+                                                onKeyPress="if(this.value.length==3) return false;" />
+                                            <input type="text" name="peso" maxlength="6"
+                                                onkeyup="checarValorPonto(this)" placeholder="Peso" />
+                                            <input type="text" name="altura" maxlength="4"
+                                                onkeyup="checarValorPonto(this)" placeholder="Altura" />
+                                            <button class="calculoFeminino" type="submit" onclick="">Calcular</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="radio" name="tabs" class="rd_tabs" id="infantil">
+                        <label for="infantil">IMC INFANTL (M)</label>
+                        <div class="content" id="infantilM">
+                            <article>
+                                <div class="login-page">
+                                    <div class="form">
+                                        <form name="formInfantilM" id="formInfantilM"
+                                            action="javascript:calculaImcInfantilM()">
+                                            <input type="number" name="idade" placeholder="Idade"
+                                                pattern="/^-?\d+\.?\d*$/"
+                                                onKeyPress="if(this.value.length==3) return false;" />
+                                            <input type="text" name="peso" maxlength="6"
+                                                onkeyup="checarValorPonto(this)" placeholder="Peso" />
+                                            <input type="text" name="altura" maxlength="4"
+                                                onkeyup="checarValorPonto(this)" placeholder="Altura" />
+                                            <button class="calculoMasculino" type="submit" onclick="">Calcular</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="radio" name="tabs" class="rd_tabs" id="infantilF">
+                        <label for="infantilF">IMC INFANTL (F)</label>
+                        <div class="content" id="infantilF">
+                            <article>
+                                <div class="login-page">
+                                    <div class="form">
+                                        <form name="formInfantilF" id="formInfantilF"
+                                            action="javascript:calculaImcInfantilF()">
+                                            <input type="number" name="idade" placeholder="Idade"
+                                                pattern="/^-?\d+\.?\d*$/"
+                                                onKeyPress="if(this.value.length==3) return false;" />
+                                            <input type="text" name="peso" maxlength="6"
+                                                onkeyup="checarValorPonto(this)" placeholder="Peso" />
+                                            <input type="text" name="altura" maxlength="4"
+                                                onkeyup="checarValorPonto(this)" placeholder="Altura" />
+                                            <button class="calculoFeminino" type="submit" onclick="">Calcular</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <section class="saude" id="Saude">
+        <div class="container">
+            <h2 class="titulo-secao">DICAS DE SAÚDE</h2>
+            <div class="card">
+                <div class="img" id="caminhada"></div>
+
+                <div class="text">
+                    <span class="title">Caminhada</span>
+                    <p class="desc"> Caminhada também regula os níveis de colesterol no corpo. Ela age tanto na
+                        diminuição na produção de gorduras ruins ao organismo, que têm mais facilidade de se acumular
+                        nas paredes dos vasos sanguíneos e por isso causar derrames e infartos, como no aumento na
+                        produção de HDL, mais conhecido como colesterol bom.</p>
+                </div>
+
+                <div class="arrow">
+                    <span>&#8673;</span>
+                </div>
+            </div>
+
+            <div class="card" id="cards">
+                <div class="img" id="ciclismo"></div>
+
+                <div class="text">
+                    <span class="title">Ciclismo</span>
+                    <p class="desc"> Ciclismo é uma atividade que envolve a repetição de um movimento e que usa como
+                        meio de locomoção a bicicleta. O ciclismo pode ser competitivo, recreativo e também praticado
+                        como forma de atividade física.</p>
+                </div>
+
+                <div class="arrow">
+                    <span>&#8673;</span>
+                </div>
+            </div>
+
+            <div class="card" id="cards">
+                <div class="img" id="danca"></div>
+
+                <div class="text">
+                    <span class="title">Dança</span>
+                    <p class="desc"> É uma prática que auxilia o indivíduo a tomar consciência de seu corpo físico, a
+                        trabalhar a concentração, a memória e a coordenação motora, que favorece o bem-estar físico,
+                        mental, emocional e social.</p>
+                </div>
+
+                <div class="arrow">
+                    <span>&#8673;</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img" id="luta"></div>
+
+                <div class="text">
+                    <span class="title">Luta</span>
+                    <p class="desc"> De acordo com o Ministério da Saúde, a prática de lutas promove inúmeros benefícios
+                        para a saúde do corpo e da mente, como, por exemplo, ajuda a melhorar o condicionamento físico,
+                        como, por exemplo, a respiração, a flexibilidade, a coordenação motora e a postura.</p>
+                </div>
+
+                <div class="arrow">
+                    <span>&#8673;</span>
+                </div>
+            </div>
+
+            <div class="card" id="cards">
+                <div class="img" id="natacao"></div>
+
+                <div class="text">
+                    <span class="title">Natação</span>
+                    <p class="desc"> O objetivo principal da natação é se deslocar na água a partir de movimentos feitos
+                        com os braços e as pernas. Por isso é um esporte que envolve a musculatura de todo o corpo,
+                        sendo um dos exercícios mais completos. têm vantagens como o fortalecimento da musculatura e
+                        flexibilidade.</p>
+                </div>
+
+                <div class="arrow">
+                    <span>&#8673;</span>
+                </div>
+            </div>
+
+            <div class="card" id="cards">
+                <div class="img" id="habitos"></div>
+
+                <div class="text">
+                    <span class="title">Hábitos saudáveis</span>
+                    <p class="desc"> A alimentação saudável contribui com o aumento da disposição, autoestima,
+                        diminuição do estresse e ansiedade, melhora da qualidade do sono, além de prevenir uma série de
+                        doenças, como: Anemia, Hipertensão, Distúrbios Metabólicos, Problema Renal, Intestinal entre
+                        outros.
+                    </p>
+                </div>
+
+                <div class="arrow">
+                    <span>&#8673;</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <nav class="menu-rodape">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#Sobre">SOBRE</a></li>
+                    <li><a href="#IMC">IMC</a></li>
+                    <li><a href="#Saude">SAÚDE</a></li>
+                </ul>
+            </nav>
+
+
+            <ul class="social">
+                <p class="direitos">Saúde ++ 2023 - Todos os direitos reservados para a MC Tecnologia.</p>
+                <li><a href="http://www.facebook.com">Facebook</a></li>
+                <li><a href="http://www.twitter.com">Twitter</a></li>
+                <li><a href="http://www.instagram.com">Instagram</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
