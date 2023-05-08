@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="./image/favi.jpg" type="image/x-icon">
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="./js/calculoIMC.js"></script>
 </head>
 
@@ -18,6 +19,7 @@
                     <li><a href="#Sobre">SOBRE</a></li>
                     <li><a href="#IMC">IMC</a></li>
                     <li><a href="#Saude">SAÚDE</a></li>
+                    <li><a href="#Contato">CONTATO</a></li>
                 </ul>
             </nav>
         </div>
@@ -260,6 +262,21 @@
         </div>
     </section>
 
+    <section class="contato" id="Contato">
+        <div class="container">
+            <h2 class="titulo-secao">CONTATO</h2>
+            <form name="formulario" class="formulario">
+                <input type="text" id="subject" placeholder="Digite o assunto...">
+                <input type="text" id="nome" placeholder="Digite seu nome...">
+                <input type="email" id="email" placeholder="Digite seu e-mail...">
+
+                <textarea id="menssagem" cols="30" rows="10" placeholder="Mensagem..."></textarea>
+
+                <button id="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <nav class="menu-rodape">
@@ -268,12 +285,12 @@
                     <li><a href="#Sobre">SOBRE</a></li>
                     <li><a href="#IMC">IMC</a></li>
                     <li><a href="#Saude">SAÚDE</a></li>
+                    <li><a href="#Contato">CONTATO</a></li>
                 </ul>
             </nav>
 
-
             <ul class="social">
-                <p class="direitos">Saúde ++ 2023 - Todos os direitos reservados para a MC Tecnologia.</p>
+                <p class="direitos">Saúde ++ 2023 - Todos os direitos reservados para Mayk Lucas.</p>
                 <li><a href="http://www.facebook.com">Facebook</a></li>
                 <li><a href="http://www.twitter.com">Twitter</a></li>
                 <li><a href="http://www.instagram.com">Instagram</a></li>
@@ -281,5 +298,16 @@
         </div>
     </footer>
 </body>
+<script>
+    $(document).ready(function () {
+        $('#submit').click(function (e) {
+            e.preventDefault();
+            mail_url = 'mailto:maykads2018@gmail.com?Subject=' + $('#subject').val() +
+                '&Body=Olá eu me chamo ' + $('#nome').val() + ', meu email é ' + $('#email').val() +
+                ' gostaria de dizer que ' + $('#menssagem').val()
+            window.location = mail_url
+        });
+    });
+</script>
 
 </html>
