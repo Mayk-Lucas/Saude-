@@ -467,3 +467,45 @@ footer a {
 .social a[href*="instagram"] {
     background-image: url(../image/instagram.png);
 }
+
+/** Contato **/
+.contato {
+    margin: 2.8rem 0 2.8rem 0;
+}
+
+.contato input {
+    height: 20px;
+}
+
+.contato input,
+.contato button {
+    display: block;
+}
+
+.formulario {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.contato input,
+textarea {
+    width: 100%;
+    margin-bottom: .8em;
+    padding: 4px 8px;
+    -webkit-border-radius: 0.3rem;
+    border-radius: 0.3rem;
+    border: 2px solid #ccc;
+}
+
+.contato button {
+    margin: 0 auto;
+    background: #c69;
+    border: 0;
+    color: #fff;
+    width: 210px;
+    height: 38px;
+    font-size: 1.2em;
+    -webkit-border-radius: 0.3rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+}
